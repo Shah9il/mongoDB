@@ -85,12 +85,13 @@ switched to db test
 >db.version();
 ```
 
-### To check counters of database operations
+## MangoDB Deployment
+> To check counters of database operations
 ```
 D:\set up\mongodb\bin>mongostat
 ```
 
-### Tracks and reports activity
+> Tracks and reports activity
 ```
 D:\set up\mongodb\bin>mongotop
 ```
