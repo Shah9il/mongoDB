@@ -18,7 +18,6 @@ switched to db mytestdb
 mytestdb
 ```
 
-### If you want to check your databases list, use the command show dbs.
 > Your created database (mytestdb) is not present in list. 
 ```
 >show dbs
@@ -26,7 +25,7 @@ local     0.78125GB
 config    0.23012GB
 ```
 
-### I added to users collection(table).
+> I added to users collection(table).
 ```
 >db.users.insert({"name":"UGUR COBAN"})
 >show dbs
@@ -34,7 +33,7 @@ local      0.78125GB
 mytestdb   0.23012GB
 ```
 
-### Change to collection(table). And Save record. And find last one.
+> Change to collection(table). And Save record. And find last one.
 ```
 >db.newdb.save( { a: 1 } )
 >db.newdb.find()
