@@ -48,6 +48,12 @@ users
 newdb
 ```
 
+### Delete/Drop Database
+> If you have not selected any database, then it will delete default 'test' database.
+```
+db.dropDatabase()
+```
+
 ### Help & Stats & Version
 ```
 >db.help()
