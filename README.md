@@ -111,7 +111,8 @@ users
 }
 ```
 
-> The basis of some condition, you can use following operations. 
+> The basis of some condition, you can use following operations.
+
 | Operation | Syntax | RDBMS (Where) |
 | ------ | ------ | ------ |
 | Equality | **:** | name = 'UGUR COBAN'
