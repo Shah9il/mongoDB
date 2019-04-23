@@ -42,6 +42,25 @@ ugurdb    0.000GB
 ```
 >db.users.insert({"name":"UGUR COBAN"})
 WriteResult({ "nInserted" : 1 })
+>db.users.insert([
+   {
+      _id: 1, 
+      name: 'MongoDB is no sql database',
+      tags: ['mongodb', 'database', 'NoSQL'],
+      counter: 100
+   },
+   {
+      name: "NoSQL database doesn't have tables",
+      counter: 20, 
+      comments: [	
+         {
+            user:'user1',
+            message: 'My first comment',
+            dateCreated: new Date(2013,11,10,2,35)
+         }
+      ]
+   }
+])
 ```
 
 > Add row to 'files' collection. And Save record. Then, find last one.
