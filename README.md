@@ -41,11 +41,19 @@ mytestdb   0.23012GB
 { "_id" : ObjectId(5879b0f65a56a454), "a" : 1 }
 ```
 
+### Create a collection(Table)
+> MongoDB creates collection automatically, when you insert some document. Also you can create before.
+```
+use latestdb
+switched to db latestdb
+db.createCollection("mycollection", { capped : true, autoIndexId : true, size : 6142800, max : 10000 })
+{ "ok" : 1 }
+```
+
 ### Show Collections(tables)
 ```
 >show collections
-users
-newdb
+mycollection
 ```
 
 ### Delete/Drop Database
