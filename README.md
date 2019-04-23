@@ -41,6 +41,13 @@ mytestdb   0.23012GB
 { "_id" : ObjectId(5879b0f65a56a454), "a" : 1 }
 ```
 
+### Show Collections(tables)
+```
+>show collections
+users
+newdb
+```
+
 ### Help & DB Stats
 ```
 >db.help()
