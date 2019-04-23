@@ -61,6 +61,16 @@ WriteResult({ "nInserted" : 1 })
       ]
    }
 ])
+BulkWriteResult({
+        "writeErrors" : [ ],
+        "writeConcernErrors" : [ ],
+        "nInserted" : 2,
+        "nUpserted" : 0,
+        "nMatched" : 0,
+        "nModified" : 0,
+        "nRemoved" : 0,
+        "upserted" : [ ]
+})
 ```
 
 > Add row to 'files' collection. And Save record. Then, find last one.
@@ -78,6 +88,8 @@ WriteResult({ "nInserted" : 1 })
 { "_id" : ObjectId("5cbeaf68ff0796a9ba06538d"), "file" : "selam.txt", "date" : "2019-02-02" }
 >db.users.find();
 { "_id" : ObjectId("5cbeae4fff0796a9ba06538b"), "name" : "UGUR COBAN" }
+{ "_id" : 1, "name" : "MongoDB is no sql database", "tags" : [ "mongodb", "database", "NoSQL" ], "counter" : 100 }
+{ "_id" : ObjectId("5cbeb287ff0796a9ba06538e"), "name" : "NoSQL database doesn't have tables", "counter" : 20, "comments" : [ { "user" : "user1", "message" : "My first comment", "dateCreated" : ISODate("2013-12-09T23:35:00Z") } ] }
 ```
 
 > Show Collections(tables)
