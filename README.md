@@ -73,7 +73,7 @@ BulkWriteResult({
 })
 ```
 
-> Add row to 'files' collection. And Save record. Then, find last one.
+> Add row to 'files' collection. And Save record. 
 ```
 >db.files.save( { file: 'selam.txt' } )
 WriteResult({ "nInserted" : 1 })
@@ -81,7 +81,7 @@ WriteResult({ "nInserted" : 1 })
 WriteResult({ "nInserted" : 1 })
 ```
 
-> Find(Select) rows
+> Find(Select) rows from collection
 ```
 >db.files.find()
 { "_id" : ObjectId("5cbeae8fff0796a9ba06538c"), "file" : "selam.txt" }
