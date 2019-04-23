@@ -35,7 +35,7 @@ admin     0.000GB
 local     0.000GB
 config    0.000GB
 admin     0.000GB
-**ugurdb**   0.000GB
+ugurdb    0.000GB
 ```
 
 > Add row to 'users' collection. Created automatically "users" collection.
