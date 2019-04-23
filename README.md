@@ -14,7 +14,7 @@ C:\Users\Your Name>mongo
 switched to db mytestdb
 ```
 
-> Check your db. Your created database (mytestdb), But it is not present in list. 
+> Check your db. Your created database (mytestdb), But it is not present in list. (Because no data yet)
 ```
 >db
 mytestdb
