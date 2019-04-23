@@ -48,10 +48,11 @@ users
 newdb
 ```
 
-### Help & DB Stats
+### Help & Stats & Version
 ```
 >db.help()
 >db.stats();
+>db.version();
 ```
 
 
