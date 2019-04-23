@@ -1,12 +1,12 @@
 # BIG DATA - MongoDB Tutorials
 Basic MongoDB functions and tutorials on terminal. Please install mongoDB on your server. And then,
 
-# Start to terminal (CMD)
+## Start to terminal (CMD)
 ```
 D:\set up\mongodb\bin>mongo.exe
 ```
 
-## Create database or use existing database.
+### Create database or use existing database.
 ```
 >use mytestdb
 switched to db mytestdb
