@@ -6,7 +6,7 @@ Basic MongoDB functions and tutorials on terminal. Please install mongoDB on you
 C:\Users\Your Name>mongo
 ```
 
-### Create database or use existing database. 
+## Create database or use existing database. 
 ```
 >use mytestdb
 switched to db mytestdb
@@ -21,7 +21,7 @@ local     0.78125GB
 config    0.23012GB
 ```
 
-### Create Collections(table)
+## Create Collections(table)
 > MongoDB creates collection automatically, when you insert some document. Also you can create before.
 ```
 >use latestdb
