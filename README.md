@@ -122,6 +122,26 @@ users
 | Greater Than Equals	 | **$gte** | counter >= 50
 | Not Equals	 | **$ne** | counter != 50
 
+> Where condition : (name = 'UGUR COBAN' OR anyfieldname = 'anytext' OR counter>50)
+```
+>db.users.find({ "counter": {$gt:50}, $or: [{"name": "UGUR COBAN"}, {"anyfieldname": "anytext"}] }).pretty()
+```
+
+> Where condition : counter>50 AND (name = 'UGUR COBAN' OR anyfieldname = 'anytext')
+```
+>db.users.find({ $or: [{"name": "UGUR COBAN"}, {"anyfieldname": "anytext"}, {"counter": {$gt:50}} ] }).pretty()
+{ "_id" : ObjectId("5cbeae4fff0796a9ba06538b"), "name" : "UGUR COBAN" }
+{
+        "_id" : 1,
+        "name" : "MongoDB is no sql database",
+        "tags" : [
+                "mongodb",
+                "database",
+                "NoSQL"
+        ],
+        "counter" : 100
+}
+```
 
 ## Delete/Drop Database
 > If you have not selected any database, then it will delete default 'test' database.
