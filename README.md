@@ -8,7 +8,8 @@ C:\Users\Your Name>mongo
 
 
 
-## Create database or use existing database. 
+## Create Database
+> Create database or use existing database.
 ```
 >use ugurdb
 switched to db ugurdb
@@ -91,7 +92,26 @@ users
 
 
 ## Find(Select) rows from collection
+> Simple select query
+```
+>db.users.find()
+{ "_id" : ObjectId("5cbeae4fff0796a9ba06538b"), "name" : "UGUR COBAN" }
+{ "_id" : 1, "name" : "MongoDB is no sql database", "tags" : [ "mongodb", "database", "NoSQL" ], "counter" : 100 }
+{ "_id" : ObjectId("5cbeb287ff0796a9ba06538e"), "name" : "NoSQL database doesn't have tables", "counter" : 20, "comments" : [ { "user" : "user1", "message" : "My first comment", "dateCreated" : ISODate("2013-12-09T23:35:00Z") } ] }
+```
 
+> Conditions **$and** **$or**, Also, you can use pretty() method for formatted.
+```
+>db.files.find({$and:[{"file":"selam.txt"}]}).pretty()
+{ "_id" : ObjectId("5cbeae8fff0796a9ba06538c"), "file" : "selam.txt" }
+{
+        "_id" : ObjectId("5cbeaf68ff0796a9ba06538d"),
+        "file" : "selam.txt",
+        "date" : "2019-02-02"
+}
+```
+
+> The basis of some condition, you can use following operations. 
 | Operation | Syntax | RDBMS (Where) |
 | ------ | ------ | ------ |
 | Equality | **:** | name = 'UGUR COBAN'
@@ -100,24 +120,6 @@ users
 | Greater Than	 | **$gt** | counter > 50
 | Greater Than Equals	 | **$gte** | counter >= 50
 | Not Equals	 | **$ne** | counter != 50
-
-```
->db.users.find();
-{ "_id" : ObjectId("5cbeae4fff0796a9ba06538b"), "name" : "UGUR COBAN" }
-{ "_id" : 1, "name" : "MongoDB is no sql database", "tags" : [ "mongodb", "database", "NoSQL" ], "counter" : 100 }
-{ "_id" : ObjectId("5cbeb287ff0796a9ba06538e"), "name" : "NoSQL database doesn't have tables", "counter" : 20, "comments" : [ { "user" : "user1", "message" : "My first comment", "dateCreated" : ISODate("2013-12-09T23:35:00Z") } ] }
-```
-
-> To display the results in a formatted way, you can use pretty() method.
-```
->db.files.find().pretty()
-{ "_id" : ObjectId("5cbeae8fff0796a9ba06538c"), "file" : "selam.txt" }
-{
-        "_id" : ObjectId("5cbeaf68ff0796a9ba06538d"),
-        "file" : "selam.txt",
-        "date" : "2019-02-02"
-}
-```
 
 
 ## Delete/Drop Database
