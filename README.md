@@ -7,6 +7,7 @@ C:\Users\Your Name>mongo
 ```
 
 
+
 ## Create database or use existing database. 
 ```
 >use mytestdb
@@ -21,6 +22,7 @@ mytestdb
 local     0.78125GB
 config    0.23012GB
 ```
+
 
 
 ## Create Collections(table)
