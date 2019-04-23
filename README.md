@@ -44,9 +44,9 @@ mytestdb   0.23012GB
 ### Create a collection(Table)
 > MongoDB creates collection automatically, when you insert some document. Also you can create before.
 ```
-use latestdb
+>use latestdb
 switched to db latestdb
-db.createCollection("mycollection")
+>db.createCollection("mycollection")
 { "ok" : 1 }
 ```
 
@@ -59,9 +59,9 @@ mycollection
 ### Delete/Drop Database
 > If you have not selected any database, then it will delete default 'test' database.
 ```
-use latestdb
+>use latestdb
 switched to db latestdb
-db.dropDatabase()
+>db.dropDatabase()
 ```
 
 ### Help & Stats & Version
