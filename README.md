@@ -6,41 +6,22 @@ Basic MongoDB functions and tutorials on terminal. Please install mongoDB on you
 C:\Users\Your Name>mongo
 ```
 
-### Create database or use existing database.
+### Create database or use existing database. 
 ```
 >use mytestdb
 switched to db mytestdb
 ```
 
-### To check your currently selected database, use the command db
+> Check your db. Your created database (mytestdb), But it is not present in list. 
 ```
 >db
 mytestdb
-```
-
-> Your created database (mytestdb) is not present in list. 
-```
 >show dbs
 local     0.78125GB
 config    0.23012GB
 ```
 
-> I added to users collection(table).
-```
->db.users.insert({"name":"UGUR COBAN"})
->show dbs
-local      0.78125GB
-mytestdb   0.23012GB
-```
-
-> Change to collection(table). And Save record. And find last one.
-```
->db.newdb.save( { a: 1 } )
->db.newdb.find()
-{ "_id" : ObjectId(5879b0f65a56a454), "a" : 1 }
-```
-
-### Create a collection(Table)
+### Create Collections(table)
 > MongoDB creates collection automatically, when you insert some document. Also you can create before.
 ```
 >use latestdb
@@ -49,10 +30,28 @@ switched to db latestdb
 { "ok" : 1 }
 ```
 
-### Show Collections(tables)
+> Add row to 'users' collection. Created automatically "users" collection.
+```
+>db.users.insert({"name":"UGUR COBAN"})
+>show dbs
+local      0.78125GB
+mytestdb   0.23012GB
+```
+
+> Add row to 'newdb' collection. And Save record. Then, find last one.
+```
+>db.newdb.save( { a: 1 } )
+>db.newdb.find()
+{ "_id" : ObjectId(5879b0f65a56a454), "a" : 1 }
+```
+
+
+> Show Collections(tables)
 ```
 >show collections
 mycollection
+users
+newdb
 ```
 
 ### Delete/Drop Database
