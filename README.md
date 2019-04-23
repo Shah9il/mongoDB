@@ -123,7 +123,7 @@ users
 >db.users.find({ "counter": {$gt:50}, $or: [{"name": "UGUR COBAN"}, {"anyfieldname": "anytext"}] }).pretty()
 ```
 
-> Where condition : counter>50 AND (name = 'UGUR COBAN' OR anyfieldname = 'anytext')
+> Where condition : counter>50 AND (name = 'UGUR COBAN' OR anyfieldname = 'anytext') ORDER BY name ASC LIMIT 5,10
 ```
 >db.users.find({ $or: [{"name": "UGUR COBAN"}, {"anyfieldname": "anytext"}, {"counter": {$gt:50}} ] }).pretty()
 { "_id" : ObjectId("5cbeae4fff0796a9ba06538b"), "name" : "UGUR COBAN" }
@@ -139,6 +139,12 @@ users
 }
 ```
 
+> Simple RDBMS: "ORDER BY name ASC LIMIT 1,2". Sorting (ASC:1,DESC-1) - LIMIT skip,limit
+```
+>db.users.find().sort({name:1}).skip(1).limit(2)
+{ "_id" : 1, "name" : "MongoDB is no sql database", "tags" : [ "mongodb", "database", "NoSQL" ], "counter" : 100 }
+{ "_id" : ObjectId("5cbeb287ff0796a9ba06538e"), "name" : "NoSQL database doesn't have tables", "counter" : 20, "comments" : [ { "user" : "user1", "message" : "My first comment", "dateCreated" : ISODate("2013-12-09T23:35:00Z") } ] }
+```
 
 ## Documents(Rows) Update / Remove(Delete) 
 > Update Documents ( To update multiple documents,'multi' to true )
