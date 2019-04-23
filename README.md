@@ -25,7 +25,9 @@ local     0.78125GB
 test      0.23012GB
 ```
 
-### Your created database (mytestdb) is not present in list. I added to users collection(table).
+> Your created database (mytestdb) is not present in list. 
+
+### I added to users collection(table).
 ```
 >db.users.insert({"name":"UGUR COBAN"})
 >show dbs
