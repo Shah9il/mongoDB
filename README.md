@@ -72,9 +72,10 @@ users
 ## Delete/Drop Database
 > If you have not selected any database, then it will delete default 'test' database.
 ```
->use latestdb
-switched to db latestdb
+>use test
+switched to db test
 >db.dropDatabase()
+{ "dropped" : "test", "ok" : 1 }
 ```
 
 ### Help & Stats & Version
