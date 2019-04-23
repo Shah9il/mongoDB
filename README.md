@@ -19,13 +19,12 @@ mytestdb
 ```
 
 ### If you want to check your databases list, use the command show dbs.
+> Your created database (mytestdb) is not present in list. 
 ```
 >show dbs
 local     0.78125GB
-test      0.23012GB
+config    0.23012GB
 ```
-
-> Your created database (mytestdb) is not present in list. 
 
 ### I added to users collection(table).
 ```
@@ -33,13 +32,12 @@ test      0.23012GB
 >show dbs
 local      0.78125GB
 mytestdb   0.23012GB
-test       0.23012GB
 ```
 
-### Save and Find in "test" db
+### Change to collection(table). And Save record. And find last one.
 ```
->db.test.save( { a: 1 } )
->db.test.find()
+>db.newdb.save( { a: 1 } )
+>db.newdb.find()
 { "_id" : ObjectId(5879b0f65a56a454), "a" : 1 }
 ```
 
