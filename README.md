@@ -55,6 +55,15 @@ newdb
 >db.version();
 ```
 
+### To check counters of database operations
+```
+D:\set up\mongodb\bin>mongostat
+```
+
+### Tracks and reports activity
+```
+D:\set up\mongodb\bin>mongotop
+```
 
 ## Documentation
 
