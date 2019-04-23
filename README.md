@@ -59,6 +59,8 @@ mycollection
 ### Delete/Drop Database
 > If you have not selected any database, then it will delete default 'test' database.
 ```
+use latestdb
+switched to db latestdb
 db.dropDatabase()
 ```
 
