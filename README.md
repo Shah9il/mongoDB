@@ -78,7 +78,7 @@ switched to db test
 { "dropped" : "test", "ok" : 1 }
 ```
 
-### Help & Stats & Version
+## Help & Stats & Version
 ```
 >db.help()
 >db.stats();
