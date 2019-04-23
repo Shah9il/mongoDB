@@ -164,13 +164,26 @@ db.files.find()
 ```
 
 
-## Drop Database
-> If you have not selected any database, then it will delete default 'test' database.
+## Drop Collection / Database
+> Drop Collection(table)
 ```
->use test
-switched to db test
+>show collections
+files
+logs
+users
+>db.files.drop()
+true
+>show collections
+logs
+users
+```
+
+> Drop Database  ( If you have not selected any database, then it will delete default 'test' database. )
+```
+>use ugurdb
+switched to db ugurdb
 >db.dropDatabase()
-{ "dropped" : "test", "ok" : 1 }
+{ "dropped" : "ugurdb", "ok" : 1 }
 ```
 
 ## Help & Stats & Version
