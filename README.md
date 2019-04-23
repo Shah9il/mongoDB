@@ -91,6 +91,16 @@ users
 
 
 ## Find(Select) rows from collection
+
+| Operation | Syntax | RDBMS (Where) |
+| ------ | ------ | ------ |
+| Equality | **:** | name = 'UGUR COBAN'
+| Less Than	 | **$lt** | counter < 50
+| Less Than Equals	 | **$lte** | counter <= 50
+| Greater Than	 | **$gt** | counter > 50
+| Greater Than Equals	 | **$gte** | counter >= 50
+| Not Equals	 | **$ne** | counter != 50
+
 ```
 >db.users.find();
 { "_id" : ObjectId("5cbeae4fff0796a9ba06538b"), "name" : "UGUR COBAN" }
