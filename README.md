@@ -10,17 +10,18 @@ C:\Users\Your Name>mongo
 
 ## Create database or use existing database. 
 ```
->use mytestdb
-switched to db mytestdb
+>use ugurdb
+switched to db ugurdb
 ```
 
 > Check your db. Your created database (mytestdb), But it is not present in list. (Because no data yet)
 ```
 >db
-mytestdb
+ugurdb
 >show dbs
-local     0.78125GB
-config    0.23012GB
+local     0.000GB
+config    0.000GB
+admin     0.000GB
 ```
 
 
@@ -28,10 +29,13 @@ config    0.23012GB
 ## Create Collections(table)
 > MongoDB creates collection automatically, when you insert some document. Also you can create before.
 ```
->use latestdb
-switched to db latestdb
->db.createCollection("mycollection")
+>db.createCollection("logs")
 { "ok" : 1 }
+>show dbs
+local     0.000GB
+config    0.000GB
+admin     0.000GB
+**ugurdb**   0.000GB
 ```
 
 > Add row to 'users' collection. Created automatically "users" collection.
@@ -42,20 +46,20 @@ local      0.78125GB
 mytestdb   0.23012GB
 ```
 
-> Add row to 'newdb' collection. And Save record. Then, find last one.
+> Add row to 'files' collection. And Save record. Then, find last one.
 ```
->db.newdb.save( { a: 1 } )
->db.newdb.find()
-{ "_id" : ObjectId(5879b0f65a56a454), "a" : 1 }
+>db.files.save( { file: 'selam.txt' } )
+>db.files.find()
+{ "_id" : ObjectId(5879b0f65a56a454), "file" : "selam.txt" }
 ```
 
 
 > Show Collections(tables)
 ```
 >show collections
-mycollection
 users
-newdb
+files
+logs
 ```
 
 ## Delete/Drop Database
