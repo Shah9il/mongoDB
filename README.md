@@ -6,7 +6,7 @@ Basic MongoDB functions and tutorials on terminal. Please install mongoDB on you
 D:\set up\mongodb\bin>mongo.exe
 ```
 
-# save and find in "test" db
+# Save and Find in "test" db
 ```
 >db.test.save( { a: 1 } )
 >db.test.find()
