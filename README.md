@@ -41,9 +41,7 @@ ugurdb    0.000GB
 > Add row to 'users' collection. Created automatically "users" collection.
 ```
 >db.users.insert({"name":"UGUR COBAN"})
->show dbs
-local      0.78125GB
-mytestdb   0.23012GB
+WriteResult({ "nInserted" : 1 })
 ```
 
 > Add row to 'files' collection. And Save record. Then, find last one.
