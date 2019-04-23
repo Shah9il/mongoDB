@@ -200,6 +200,16 @@ switched to db ugurdb
 ```
 
 ## MangoDB Deployment
+> Create Backup
+```
+D:\set up\mongodb\bin>mongodump
+```
+
+> Restore Backup
+```
+D:\set up\mongodb\bin>mongorestore
+```
+
 > To check counters of database operations
 ```
 D:\set up\mongodb\bin>mongostat
@@ -209,6 +219,7 @@ D:\set up\mongodb\bin>mongostat
 ```
 D:\set up\mongodb\bin>mongotop
 ```
+ 
 
 ## Documentation
 
