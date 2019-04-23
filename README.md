@@ -100,15 +100,11 @@ users
 { "_id" : ObjectId("5cbeb287ff0796a9ba06538e"), "name" : "NoSQL database doesn't have tables", "counter" : 20, "comments" : [ { "user" : "user1", "message" : "My first comment", "dateCreated" : ISODate("2013-12-09T23:35:00Z") } ] }
 ```
 
-> Conditions **$and** **$or**, Also, you can use pretty() method for formatted.
+> Conditions **$and** **$or**. Also Display format {key:1}. ( pretty() method for formatted. )
 ```
->db.files.find({$and:[{"file":"selam.txt"}]}).pretty()
-{ "_id" : ObjectId("5cbeae8fff0796a9ba06538c"), "file" : "selam.txt" }
-{
-        "_id" : ObjectId("5cbeaf68ff0796a9ba06538d"),
-        "file" : "selam.txt",
-        "date" : "2019-02-02"
-}
+>db.files.find({$and:[{"file":"selam.txt"}]} , {"file":1,_id:0} ).pretty()
+{ "file" : "selam.txt" }
+{ "file" : "selam.txt" }
 ```
 
 > The basis of some condition, you can use following operations.
@@ -143,7 +139,32 @@ users
 }
 ```
 
-## Delete/Drop Database
+
+## Documents(Rows) Update / Remove(Delete) 
+> Update Documents ( To update multiple documents,'multi' to true )
+```
+db.users.update({'name':'UGUR COBAN'},
+   {$set:{'name':'COBAN UGUR'}},{multi:true})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+```
+
+> Delete Documents 
+```
+db.file.remove({"_id": ObjectId("5cbeae8fff0796a9ba06538c")})
+WriteResult({ "nRemoved" : 0 })
+db.files.remove({"_id": ObjectId("5cbeae8fff0796a9ba06538c")})
+WriteResult({ "nRemoved" : 1 })
+```
+
+> Delete All Documents ( Truncate table )
+```
+db.files.remove({})
+WriteResult({ "nRemoved" : 1 })
+db.files.find()
+```
+
+
+## Drop Database
 > If you have not selected any database, then it will delete default 'test' database.
 ```
 >use test
