@@ -47,17 +47,26 @@ WriteResult({ "nInserted" : 1 })
 > Add row to 'files' collection. And Save record. Then, find last one.
 ```
 >db.files.save( { file: 'selam.txt' } )
->db.files.find()
-{ "_id" : ObjectId(5879b0f65a56a454), "file" : "selam.txt" }
+WriteResult({ "nInserted" : 1 })
+>db.files.save( { file: 'selam.txt', date:"2019-02-02" } )
+WriteResult({ "nInserted" : 1 })
 ```
 
+> Find(Select) rows
+```
+>db.files.find()
+{ "_id" : ObjectId("5cbeae8fff0796a9ba06538c"), "file" : "selam.txt" }
+{ "_id" : ObjectId("5cbeaf68ff0796a9ba06538d"), "file" : "selam.txt", "date" : "2019-02-02" }
+>db.users.find();
+{ "_id" : ObjectId("5cbeae4fff0796a9ba06538b"), "name" : "UGUR COBAN" }
+```
 
 > Show Collections(tables)
 ```
 >show collections
-users
 files
 logs
+users
 ```
 
 ## Delete/Drop Database
