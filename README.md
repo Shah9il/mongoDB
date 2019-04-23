@@ -46,7 +46,7 @@ mytestdb   0.23012GB
 ```
 use latestdb
 switched to db latestdb
-db.createCollection("mycollection", { capped : true, autoIndexId : true, size : 6142800, max : 10000 })
+db.createCollection("mycollection")
 { "ok" : 1 }
 ```
 
