@@ -3,7 +3,7 @@ Basic MongoDB functions and tutorials on terminal. Please install mongoDB on you
 
 ## Start to terminal (CMD)
 ```
-D:\set up\mongodb\bin>mongo.exe
+C:\Users\Your Name>mongo
 ```
 
 ### Create database or use existing database.
