@@ -2,7 +2,7 @@
 - [**PHP** tutorials on MongoDB](https://github.com/ugrcoban/mongoDB/tree/master/php)
 - [**Java** tutorials on MongoDB](https://github.com/ugrcoban/mongoDB/tree/master/java)
 
-# BIG DATA MongDB - Shell Scripting
+# Shell Scripting
 > Basic MongoDB functions and tutorials on terminal. Please install mongoDB on your server. And then,
 ```
 C:\Users\Your Name>mongo
