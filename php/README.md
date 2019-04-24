@@ -1,4 +1,4 @@
-# BIG DATA - PHP & MongoDB Tutorials
+# PHP & MongoDB Tutorials
 Basic php tutorials on mongodb
 
 ## Test with docker
