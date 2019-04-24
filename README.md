@@ -5,7 +5,7 @@
 # MongoDB - Shell Scripting
 > Basic MongoDB functions and tutorials on terminal. Please install mongoDB on your server. And then,
 ```
-C:\Users\Your Name>mongo
+C:\Program Files\MongoDB\Server\4.0\bin>mongo
 ```
 
 
