@@ -3,6 +3,6 @@ Basic php tutorials on mongodb
 
 ## Test with docker
 ```
-docker build -t {container_name} . && docker run -it {container_name}
-docker exec -t -i {container_name} bash
+docker build -t {container_name} .
+docker run -it {container_name} bash
 ```
