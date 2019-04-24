@@ -17,7 +17,7 @@ C:\Program Files\MongoDB\Server\4.0\bin>mongo
 switched to db ugurdb
 ```
 
-> Check your db. Your created database (mytestdb), But it is not present in list. (Because no data yet)
+> Check your db. Your created database (ugurdb), But it is not present in list. (Because no data yet)
 ```
 >db
 ugurdb
